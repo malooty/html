@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Time Example</title>
+</head>
+<body>
+    <h1>Hello ,: <span id="timeDisplay"></span></h1>
+
+    <script>
+        function updateTime() {
+            const currentTime = new Date();
+            const timeString = currentTime.toLocaleTimeString();
+            document.getElementById("timeDisplay").innerText = timeString;
+        }
+
+        // Update time every second
+        setInterval(updateTime, 1000);
+
+        // Initial time update
+        updateTime();
+    </script>
+</body>
+</html>
