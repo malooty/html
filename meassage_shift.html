@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROATING MESS</title>
+    <script>
+        const messages = [
+            "M1",
+            "M2 ",
+            "M3",
+            "M4",
+            "M5"
+        ];
+        let currentMessageIndex = 0;
+
+        function updateMessage() {
+            const timeDisplay = document.getElementById('timeDisplay');
+            timeDisplay.textContent = messages[currentMessageIndex];
+            currentMessageIndex = (currentMessageIndex + 1) % messages.length;
+        }
+
+        setInterval(updateMessage, 10000); // Update message every minute[CURRENTLY MESSAGE CHANGES AFTER 10 SEC]
+    </script>
+</head>
+<body>
+    <h1>please wait a 50SEC for FULL message</h1>
+    <span id="timeDisplay"></span>
+</body>
+</html>
